@@ -12,7 +12,7 @@
 - Canonical candidate: `final-e`, the sanitized allowlisted source export
 - Accepted R1 source baseline: `1b36ff66464bf57dca207e8168eb3432326bb47b`
 - Accepted base export manifest SHA-256: `ad7e3da016b1daf4d66fca6bc7e4705edbc1fb635292ff728f37b7392b6bb6c9`
-- Release candidate manifest SHA-256: `75da028a6954a646c3020664d19e707ae7328258b842ac2e4a910fe42bf5d2c2`
+- Release candidate manifest SHA-256: `7547eb96125c65f1af09f406dfa2914e09977f95bc0f75eeb0fa223c4297db6a`
 - Final candidate payload: 157 manifest-listed files; the manifest itself and this post-publication decision are separate. The Git commit binds the complete repository tree.
 
 ## Acceptance and licensing

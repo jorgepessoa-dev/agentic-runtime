@@ -31,6 +31,9 @@ NAMES = {
     "e2promotion": ("agentic_e2_promoter", "agentic_runtime_e2_promotion"),
 }
 MARKER = "agentic-runtime-m4c-temporary-test-identity"
+# This fixed NOLOGIN authority owns SECURITY DEFINER promotion functions in
+# fresh migrations. It is not one of the temporary login identities in NAMES.
+EXTRA_CAPABILITY_GROUPS = frozenset({"agentic_promotion_executor"})
 
 
 def _proc(pid: int):
@@ -121,7 +124,8 @@ def main() -> int:
             # against their current checksum and never against stale fixtures.
             if not admin.execute("SELECT 1 FROM pg_roles WHERE rolname='agentic_runtime_test'").fetchone():
                 raise RuntimeError("agentic_runtime_test role is required for the disposable suite database")
-            for _, group in NAMES.values():
+            required_groups = {group for _, group in NAMES.values()} | EXTRA_CAPABILITY_GROUPS
+            for group in sorted(required_groups):
                 if not admin.execute("SELECT 1 FROM pg_roles WHERE rolname=%s", (group,)).fetchone():
                     admin.execute(sql.SQL("CREATE ROLE {} NOLOGIN").format(sql.Identifier(group)))
             admin.execute(sql.SQL("DROP DATABASE IF EXISTS {} WITH (FORCE)").format(sql.Identifier(database_name)))

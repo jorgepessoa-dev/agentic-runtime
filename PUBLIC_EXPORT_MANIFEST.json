@@ -454,7 +454,7 @@
     {
       "classification": "PUBLIC",
       "path": "scripts/run_m4c_role_tests.py",
-      "sha256": "967f1f3474134042756547310f0ee418cabd2c5bd8eccb606e8d62fde5ff1189",
+      "sha256": "20d4af72ed3bd7bf8e76c482d281d83111d4d2fb0677859066fe329e4e3b8b1d",
       "transformations": []
     },
     {
