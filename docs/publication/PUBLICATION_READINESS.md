@@ -2,24 +2,26 @@
 
 **PUBLICATION_READINESS = READY**
 
-**External status: PUBLICATION_READY — RELEASE IN PROGRESS**
+**External status: PUBLICATION_READY — PUBLISHED SOURCE R1**
 
-R1 is accepted. The public source candidate is based on two identical allowlisted exports. The private source repository and its history are not included.
+Agentic Runtime R1 was published as a source-only repository on GitHub on 2026-10-06. The public repository starts from a sanitized export and does not contain the private source repository's Git history.
 
 ## Public/private boundary
 
-The candidate excludes private Git history, operational evidence, credentials and administration modules. The release adds an Apache attribution `NOTICE` and a private vulnerability reporting form. The public identity is **Agentic Runtime**. The original project code is licensed under Apache-2.0; copyright attribution is **Copyright 2026 Jorge Pessoa**. No organization or other legal entity is inferred. Dependency licenses remain unchanged and are listed in `THIRD_PARTY_NOTICES.md`.
+The public candidate excludes private Git history, operational evidence, credentials and administration modules. The public identity is **Agentic Runtime**. The original project code is licensed under Apache-2.0. Copyright attribution is **Copyright 2026 Jorge Pessoa**, as authorized by the owner; no organization or other legal entity is inferred. The full Apache license is in `LICENSE`, attribution is in `NOTICE`, and third-party components retain their own licenses in `THIRD_PARTY_NOTICES.md`.
 
 ## Security reporting
 
-`SECURITY.md` directs researchers to GitHub Private Vulnerability Reporting and says not to open vulnerability reports as public issues. `.github/VULNERABILITY_REPORT.yml` provides the custom structured form. The setting is enabled and verified as part of repository creation before the initial source push.
+GitHub Private Vulnerability Reporting is enabled and verified. `SECURITY.md` directs researchers to the private reporting channel and says not to open vulnerabilities as public issues. `.github/VULNERABILITY_REPORT.yml` defines the structured private report form. GitHub secret scanning, push protection, dependency graph and vulnerability alerts are enabled.
 
 ## Dependencies and distribution
 
-The project source repository and current user install do not vendor or redistribute third-party wheels. A future project wheel declares dependencies rather than embedding them. No project wheel, container/image or executable is distributed here. Development uses upstream `psycopg[binary]` for portable setup; production uses system-backed psycopg with OS-provided `libpq` and TLS libraries. Platform-specific licensing review is required before a future distribution bundles dependencies.
+GitHub recognizes the Python lockfile and CI workflow dependencies. Its SPDX-2.3 SBOM contains the project, repository, Python dependencies and GitHub Actions. GitHub currently emits `NOASSERTION` for third-party package licenses; `THIRD_PARTY_NOTICES.md` records the licenses verified from upstream metadata and repositories. Open Dependabot alerts: zero at publication review. The source repository does not vendor dependency wheels, containers or executables.
 
-## Candidate verification
+The source-only publication is not blocked by platform-specific components of the development `psycopg[binary]` wheel because the project does not redistribute that wheel or bundle its native libraries. Per-platform SBOM, license/NOTICE and LGPL relinking review remains required before any future image or executable distribution that bundles dependencies.
 
-The accepted R1 base export contains 155 files; independent builds had identical manifests. The updated candidate manifest hashes every source-candidate payload file except the manifest itself. `R1_RELEASE_DECISION.md` is added after publication with the resulting manifest hash, source commit, repository URL, reporting status and SBOM result. It is excluded from the export manifest to avoid self-reference, and its commit SHA is verified separately.
+## Release verification
 
-The candidate is rechecked for secrets, personal data, infrastructure data, symlinks, valid JSON and accidental Git history. The exact owner-authorized copyright attribution is permitted in the attribution-bearing files and is separately documented in the release decision. The source-only publication is not blocked by a pre-publication SBOM. An SPDX SBOM and dependency review are performed after GitHub recognizes the manifests; platform-specific review remains required before future bundled distributions.
+The final allowlisted candidate manifest hashes the sanitized source payload. The post-publication `R1_RELEASE_DECISION.md` records the base and release manifest hashes, repository URL, source commit, privacy scans, SBOM status and security settings. It is excluded from the export manifest to avoid self-reference; the public Git commit binds the complete release record.
+
+The published default branch is `main`. No package, tag or GitHub Release was created. No runtime architecture change was made as part of publication governance.

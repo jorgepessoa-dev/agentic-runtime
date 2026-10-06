@@ -2,8 +2,8 @@
 
 **PUBLICATION_READINESS = READY**
 
-**External status: PUBLICATION_READY — RELEASE IN PROGRESS**
+**External status: PUBLICATION_READY — PUBLISHED SOURCE R1**
 
-The owner authorized publication of the sanitized Agentic Runtime R1 source candidate under Apache-2.0 with the copyright attribution in `NOTICE`. The accepted private source repository and history are not part of this candidate.
+The owner-authorized Apache-2.0 source publication is complete. The public repository was created from the sanitized candidate-only history, GitHub Private Vulnerability Reporting was enabled and verified before the source push, and the initial source commit is recorded in `R1_RELEASE_DECISION.md`.
 
-Release steps are to create the public repository, enable and verify GitHub Private Vulnerability Reporting before the source push, then publish the candidate-only Git history and review the GitHub dependency graph and SPDX SBOM. This is a source-only publication; the SBOM review does not block source publication. Platform-specific dependency packaging review remains required before future distributions that bundle dependencies.
+The source release has a GitHub-generated SPDX-2.3 SBOM and dependency review. No open Dependabot alerts were reported at verification. This source-only publication does not redistribute dependency wheels or bundled images. Platform-specific license/SBOM/relinking review remains a gate before any future distribution that bundles dependencies. No package, tag or GitHub Release was created.
