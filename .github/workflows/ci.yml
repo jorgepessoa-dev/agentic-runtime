@@ -1,0 +1,47 @@
+name: public-candidate-ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      M4C_ADMIN_DATABASE_URL: postgresql://postgres@localhost:5432/postgres
+      M3_TEST_DATABASE_URL: postgresql://postgres@localhost:5432/agentic_runtime_publication_test
+      M4C_TEST_DATABASE_NAME: agentic_runtime_publication_test
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - name: Prepare disposable test role
+        run: psql "$M4C_ADMIN_DATABASE_URL" -v ON_ERROR_STOP=1 -c 'CREATE ROLE agentic_runtime_test NOLOGIN'
+      - name: Install locked dependencies
+        run: uv sync --extra development --frozen
+      - name: Fresh migrations, replay, and deterministic tests
+        run: uv run python scripts/run_m4c_role_tests.py
+      - name: Build and scan allowlisted export
+        run: uv run python scripts/build_public_export.py "$RUNNER_TEMP/public-candidate"

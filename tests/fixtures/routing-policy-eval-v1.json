@@ -1,0 +1,16 @@
+{
+  "suite_id": "generic-capability-routing-v1",
+  "cases": [
+    {"case_id": "structured-01", "capability": "structured_output", "acceptable_executors": ["executor-general", "executor-specialized"], "costs": {"executor-general": 2, "executor-specialized": 1}},
+    {"case_id": "structured-02", "capability": "structured_output", "acceptable_executors": ["executor-general", "executor-specialized"], "costs": {"executor-general": 2, "executor-specialized": 1}},
+    {"case_id": "structured-03", "capability": "structured_output", "acceptable_executors": ["executor-general", "executor-specialized"], "costs": {"executor-general": 2, "executor-specialized": 1}},
+    {"case_id": "structured-04", "capability": "structured_output", "acceptable_executors": ["executor-general", "executor-specialized"], "costs": {"executor-general": 2, "executor-specialized": 1}},
+    {"case_id": "review-01", "capability": "code_review", "acceptable_executors": ["executor-general", "executor-specialized"], "costs": {"executor-general": 2, "executor-specialized": 1}},
+    {"case_id": "review-02", "capability": "code_review", "acceptable_executors": ["executor-general", "executor-specialized"], "costs": {"executor-general": 2, "executor-specialized": 1}},
+    {"case_id": "review-03", "capability": "code_review", "acceptable_executors": ["executor-general", "executor-specialized"], "costs": {"executor-general": 2, "executor-specialized": 1}},
+    {"case_id": "transform-01", "capability": "data_transform", "acceptable_executors": ["executor-general"], "costs": {"executor-general": 1, "executor-specialized": 2}},
+    {"case_id": "transform-02", "capability": "data_transform", "acceptable_executors": ["executor-general"], "costs": {"executor-general": 1, "executor-specialized": 2}},
+    {"case_id": "transform-03", "capability": "data_transform", "acceptable_executors": ["executor-general"], "costs": {"executor-general": 1, "executor-specialized": 2}}
+  ],
+  "metric_directions": {"verified_quality": "MAX", "cost": "MIN"}
+}

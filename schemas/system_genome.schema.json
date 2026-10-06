@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SystemGenome",
+  "description": "Minimal versioned reference to behavior-affecting runtime configuration. Governance constitution and evaluation gates are external and immutable to candidates.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "genome_id",
+    "scope_id",
+    "version",
+    "created_at",
+    "created_by",
+    "promotion_status",
+    "components",
+    "policies"
+  ],
+  "properties": {
+    "genome_id": { "type": "string", "minLength": 1 },
+    "scope_id": { "type": "string", "minLength": 1, "description": "Governed scope for which exactly one champion is active." },
+    "parent_genome_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "version": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "created_by": { "type": "string", "minLength": 1 },
+    "mutation_description": { "type": "string" },
+    "mutation_rationale": { "type": "string" },
+    "evaluation_refs": { "type": "array", "description": "References to immutable evaluation records, each pinned externally to an EvalSuiteVersion; candidates cannot select or redefine the governing suite or gates.", "items": { "$ref": "#/$defs/reference" } },
+    "promotion_status": {
+      "type": "string",
+      "enum": ["DRAFT", "CHALLENGER", "CHAMPION", "REJECTED", "RETAINED_FOR_DIVERSITY", "SUPERSEDED"]
+    },
+    "rollback_ref": { "$ref": "#/$defs/reference" },
+    "components": {
+      "type": "object",
+      "description": "Versioned references to configurable component bundles; values remain implementation- and domain-neutral.",
+      "additionalProperties": { "$ref": "#/$defs/reference" },
+      "properties": {
+        "topology": { "$ref": "#/$defs/reference" },
+        "routing": { "$ref": "#/$defs/reference" },
+        "sandbox": { "$ref": "#/$defs/reference" }
+      }
+    },
+    "policies": {
+      "type": "object",
+      "description": "References to policy bundles, never authority to override E0 governance or evaluator integrity.",
+      "additionalProperties": { "$ref": "#/$defs/reference" }
+    },
+    "budgets": { "$ref": "#/$defs/openObject" },
+    "metadata": { "$ref": "#/$defs/openObject" }
+  },
+  "$defs": {
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ref"],
+      "properties": {
+        "ref": { "type": "string", "minLength": 1 },
+        "version": { "type": "string" },
+        "digest": { "type": "string" }
+      }
+    },
+    "openObject": {
+      "type": "object",
+      "description": "Extensible, implementation-neutral values validated by the referenced policy/contract.",
+      "additionalProperties": true
+    }
+  }
+}

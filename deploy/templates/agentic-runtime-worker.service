@@ -1,0 +1,21 @@
+[Unit]
+Description=Agentic Runtime worker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=agentic-runtime
+Group=agentic-runtime
+EnvironmentFile=/etc/agentic-runtime/worker.env
+Environment=PYTHONPATH=/opt/agentic-runtime/src
+ExecStart=/opt/agentic-runtime/.venv/bin/python -m agentic_runtime.remote.worker
+Restart=on-failure
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/agentic-runtime
+
+[Install]
+WantedBy=multi-user.target

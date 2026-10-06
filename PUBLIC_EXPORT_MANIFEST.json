@@ -1,0 +1,948 @@
+{
+  "export_tool_version": "1.0",
+  "files": [
+    {
+      "classification": "PUBLIC",
+      "path": ".env.example",
+      "sha256": "3ac9121fccd6053fb0eeb78dabc72ede5ecb61a1abfc2b247d507f40ed9b1ef1",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": ".gitignore",
+      "sha256": "7fae909dca7fefa332c70a4c365cefb37ed4a89ba7d1a50abf3324202ac9f40f",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "CONTRIBUTING.md",
+      "sha256": "df8b21176033a3aa29d01649325b8ebe979264f310ea61054f8df93cadd765f5",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "COPYRIGHT_HOLDER_REVIEW.md",
+      "sha256": "5143af5ff3473f3f1dbbbab647ab7eaee4489627b48eaf068654c21ef9e35a2f",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "NOTICE",
+      "sha256": "a9d850afd06a49fe21f35cfb3af251ba6bea3e5ea8a184fe6ed3e8d47fa7dd77",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "PUBLICATION_BLOCKERS.md",
+      "sha256": "05be6aaaeeb08c2738c71c221b8ca426f9e9de4b67557580b39f164ecbb67969",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "README.md",
+      "sha256": "9afe0f834b220193fefd5c0925eed93346422b641d7ad4df0aa24df697db4270",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "SECURITY.md",
+      "sha256": "40a09f238ddbd9cf8f3154b0ed02f59ee4bc1bbdcb4966d468a432b851b54a5e",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "a46cf3c68ae8a4835220cd893733c788965cf0667c695eacf6d779c6d672b5e9",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "VERSIONING.md",
+      "sha256": "abb160f207ae1797374551260c7abcef949a77b06f69f8352f47a8627da959e4",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "pyproject.toml",
+      "sha256": "3fcfc435c8c4a71a0b5b6b96dfd7b0c1fda16b87be48f5d6d6f8a356374cc34f",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "uv.lock",
+      "sha256": "8e0ce4abb21409fa80bca89113185e2ec5959e54e3770f47cd601c1c650d4541",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": ".github/VULNERABILITY_REPORT.yml",
+      "sha256": "a79e3ac2a6f428f9ad933709224159fc323aba3137ee9ddaeb9e259ec1ea849a",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": ".github/workflows/ci.yml",
+      "sha256": "b13cdb511486f185e19c15d1e36a227097ed6c323d3f208ce0064f9801434cf2",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "architecture/ARCHITECTURE.md",
+      "sha256": "63ea2182df2437f05edb370911c2601424c45017f10cb4ca0fc1edef48d06875",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "architecture/EVOLUTION_PLANE.md",
+      "sha256": "11dd86f7be09f10bc4acc0d2151c2bb2e6136f5ff6a2880888e65847288cd1d5",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "architecture/EXECUTION_BOUNDARIES.md",
+      "sha256": "a204d08c2a0975f71a55a865e0479578cd6e16d1958c7124fcd031b35c686826",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "architecture/SANDBOX_MODEL.md",
+      "sha256": "ec542cb9dbd67428621661894e77502cf0779d4dee34cbc713fc3bda8d6d8437",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "architecture/milestones/m10/ACCEPTANCE_MATRIX.md",
+      "sha256": "73ffd23af0f100a8ba35bd5919a96ae4b777bbc0d00473804822e8fe51dea396",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "architecture/milestones/m10/CHARTER.md",
+      "sha256": "4212229c013328a23a163d2c3207ec23b86edd3820e38b9b4c6423acdf991d65",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "architecture/milestones/m10/FAILURE_MATRIX.md",
+      "sha256": "3814ffcf878fe8eb627309d29f6c23a2bc4f110629d8910104bee1e911162a24",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "architecture/milestones/m10/TEST_RESULTS.md",
+      "sha256": "fe36a8416c74a77d4c412bb2794bdd134155bc0ebb04b3b53fb85b31d4987bc3",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "decisions/ADR-009-governed-workflow-genome-evolution.md",
+      "sha256": "3e63241d7efa71f6e2498ca39171f8a2308f96e797aa588c13b28425c01a714e",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "deploy/templates/agentic-runtime-control.service",
+      "sha256": "4b86f979beebdd2a31bcd66538f70bdaa323b90ae75e0ff3b95912370e5aa88b",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "deploy/templates/agentic-runtime-worker.service",
+      "sha256": "1d6fbead973def148412980e5f211db4a8ce5c5cce5d11a96546dc74f961177b",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "deploy/templates/cognitive-profiles.example.json",
+      "sha256": "b93a65a241b1be5f95a0c6b3bdab79e14839f32226673c53c26372607e984b61",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "deploy/templates/control.env.example",
+      "sha256": "a493209ba52ad749ed317dbc0369dfa41e3ba6f701d6d4bc5e26345ae74a5c1f",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "deploy/templates/worker.env.example",
+      "sha256": "95e9154f79abfab7c83f1846f0d11f122dc47fc070408b1ed27597d8f72f3480",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "docs/COGNITIVE_ADAPTERS.md",
+      "sha256": "3f50b7d3724458a26ca6291c39a2c13b077e44a6743bdf9c41c9e9da35d5fede",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "docs/publication/PUBLICATION_READINESS.md",
+      "sha256": "3c7b2abe33318e377a8097ae8bc7c28df8c14a3295948be9e80d61e71a370ea6",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "governance/ARCHITECTURE_INVARIANTS.md",
+      "sha256": "84dd8568451b283c66781c37593a650c74ecf5696d797e93109c7c0ac0ec6f4c",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "governance/AUTHORITY_MODEL.md",
+      "sha256": "0a7de8b21e84f7dae4ec960bdf8ab621a783943ed4a3942e37dc230b7b433c14",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "governance/EVOLUTION_POLICY.md",
+      "sha256": "da3c9d3666e41ea8d7a76239dabdefddfad9f4f3ec12bbfa1afb88058d1dc900",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "governance/MISSION_CHARTER.md",
+      "sha256": "1098526a15b76e94f8ad0a3af8c63de1380734f6ea4aeb3ac321a30f54077884",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0001_evolution.sql",
+      "sha256": "50f4a89ab730d8e6e2166cc5b05b4af16ac7856c8217ee4d79ce7bcc7b5866e2",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0002_m4_governed_promotion.sql",
+      "sha256": "7fe9d02870faa944ff35e1895c747d1d91dbf4efce31057287d185b33c889972",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0003_m4_rollback_lineage.sql",
+      "sha256": "7170085a427572738cab06883d5fcec3763037f06ddf1bbd67536ed99cd2b66c",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0004_m4b_eval_trusted_artifact.sql",
+      "sha256": "ed5713058e60ede13744a033018ad9dbffd3ea7ce22b41025bee135572ebcf1a",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0005_m4c_reference_and_promotion_guard.sql",
+      "sha256": "d20b947e86f1d059c98cee08b29f9cf5617d518f8927d84254e1fdf8c56a7838",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0006_m4c_gc_reference_edges.sql",
+      "sha256": "4e7ce50e64e6accae96a60ec15b146f9ec8a3cad0a902837b8567091809195ad",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0007_m7_governed_e1.sql",
+      "sha256": "9cc42370e6dbca424e9be542a756b0a2eb3f9f57daccf81e0ba2acd9946dabb4",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0008_m7_deterministic_e1_cost.sql",
+      "sha256": "cd152cde1bb963d3bc8afa85611c16b4175faa66d8a04c7107a60af42d453264",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0009_m8_durable_cognitive_proposal_lineage.sql",
+      "sha256": "34c64670d85821bd90f2b0f9d7f5dd90ac69b84d685f58cd0dea90dced60b7f5",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0010_m8_unverified_cost_not_promotion_evidence.sql",
+      "sha256": "c2e9450a3dd3f38624391e534eee3810b94cdb6171d4c58bd19180c273ebc229",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0011_m8_campaign_cost_evidence_policy.sql",
+      "sha256": "59ebdda763ed74afcb21bce1627f8ac5c68f0938adfc1ee4f88bf0c918ae780f",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0012_m8_unknown_cost_stays_unknown.sql",
+      "sha256": "b159dd9473bee3d5b2b2c5e0310cfda3486b45f9c910a7b854e4c10d384facd7",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0013_m8_freeze_policy_hash.sql",
+      "sha256": "19b256157bb2030a1e42dc9f57433d6b32210693601ba276a4a6ba5c60b8295b",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0014_m8_legacy_vs_authoritative_money_gate.sql",
+      "sha256": "707adde431dde5b5da8e721472f15a89484b6a44b626be70adb95df73bf82b22",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0015_m8_candidate_ref_pack_binding.sql",
+      "sha256": "bc08cdde5aac5f798ba73c215d32bdb7e52c05953d5ce834b4dea2fb9c6d68fb",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0016_m8_candidate_ref_hypothesis_binding.sql",
+      "sha256": "d404059ef0c98b7dd92d8ce4c6e4d178c4eebd15489efae289b2a0bc9c289a23",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0017_m8_promotion_policy_read_access.sql",
+      "sha256": "4b4d2e74c5d6231c35d0af9f96bc6f6aeff29e3374bcb5e7c595fa6ec1dd9495",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0018_m8_e1_event_artifact_references.sql",
+      "sha256": "a45f48299670c44c658d60a887669445cb060bdc89efb49008d277826ab1a1cf",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0019_m8_promotion_policy_definer_privilege.sql",
+      "sha256": "20b33ba4c2a2be9ce55fcc65c0363de8f7d28fd33549ab4921a17dc7ae8f2b72",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/evolution/0020_m10_e2_workflow_genomes.sql",
+      "sha256": "c76a67c4cbddf31f6381c9930cd157aa7cbf6ea5323d43f95c92e2fefbef8f85",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0001_runtime.sql",
+      "sha256": "286a001c1b58d3379756bf5683e219f2187948cb75398a4642c2ccbccd365137",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0002_m4_discovery.sql",
+      "sha256": "b22b4d32812d3b8418c67f3beedcd5478f690d8d258c772135935664f4d1f24e",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0003_m4_route_path.sql",
+      "sha256": "11419d110f0eb5bb43e98d96728f3e9ba4cdd4bdc4164d2cd13f79ed0a8b867f",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0004_m4b_campaign_gc.sql",
+      "sha256": "19a130a34e67b80e511beba745cd584fa9c18584a54a5aed7ec04061c1851d37",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0005_m4b_expired_running_retry.sql",
+      "sha256": "6aa82e5f0a816514e6d34b1f161d61a5068952376abdb2bb35c4ab9775e8f3dc",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0006_m4c_accounting_gc_protocol.sql",
+      "sha256": "3759017c3b9ae9598a0b462a0e14bd28c19617638c3de5c7040f187454131831",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0007_m4c_gc_reference_coverage.sql",
+      "sha256": "7fe034a1717af843053bfdd3a42414b38d80cadea1ec939e0d0b6559ff28752b",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0008_m4c_gc_reference_edges.sql",
+      "sha256": "58c59f02510fd7519a5f6a2388dbd6f7b39bbe87c3ff8deac4b746be46bfb8b6",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0009_m5_distributed_workers.sql",
+      "sha256": "24e68d4de19dc7c9915f8b5df812017b3bf2b8e4a25b191c67b1ec1ed6e38a34",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0010_m6_worker_capacity_and_tls_identity.sql",
+      "sha256": "563c43eba92357712a1e29e96e7c15ea58c5ee20581e3f0752b760b5575382a5",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0011_m8_cognitive_workers.sql",
+      "sha256": "0eb6c2f56427b4a0f7d5fd20c46291f5e370e86dd5ccc84e3e8ded82fe9562de",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0012_m8_cognitive_pricing.sql",
+      "sha256": "37de1b410d2b679c50c989d17435c15070e35f53e90f14b50dd206e4b3bd725b",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0013_m8_campaign_qualification_acceptance.sql",
+      "sha256": "0bc34e30d21a42830fd80c90c8e2815508a62fdd168ad2a45508b9c41b486c26",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0014_m8_admin_bridge_read_scope.sql",
+      "sha256": "940fafead1e2f0a33d001cb1dd3203b6bda74e4b8065a662b9da11c6b91486ce",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0015_m9_coordination.sql",
+      "sha256": "85f81dc789d48e5dbce9944257871dda55afb68e0d4d75d000497c3593d86ac0",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "migrations/runtime/0016_structural_task_fields.sql",
+      "sha256": "1e33721ec08d6c47fd06d9d38b7a7e79b9f8618f64c94533a9a39993d0a5a7d1",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "schemas/e2_workflow_mutation.schema.json",
+      "sha256": "38a9abbdeb9e60008b729dca5ad3781f7870064ecb397666bfaef863fa561147",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "schemas/system_genome.schema.json",
+      "sha256": "5a588aae7a1e702ff25650910532082a26fe52511263dd452c39d0403e41fc0d",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "scripts/bootstrap_m4_roles.sql",
+      "sha256": "d9cc1b5067e4cfd4d429acff4e040a13b88904d739280618529d5dfd7dff4949",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "scripts/build_public_export.py",
+      "sha256": "85cad39db8996032e4cb1f044a33ecc1ee1cd40663dc4f47d9b3b17497934e81",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "scripts/run_m4c_role_tests.py",
+      "sha256": "967f1f3474134042756547310f0ee418cabd2c5bd8eccb606e8d62fde5ff1189",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/__init__.py",
+      "sha256": "b8aaf46fc8c96329be51ca90c03f9d8be26f2105edaefd82363203de183a7b45",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/accounting/__init__.py",
+      "sha256": "ff1d95be1639443e36b6931f642b4588a0dd5f72194f943af6ad7ed9cd82e762",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/accounting/campaign.py",
+      "sha256": "51b2cbf09019ddd9b20db578cc39578d56edce111b2a5359f813d1e4dac0194a",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/adapters/__init__.py",
+      "sha256": "352864abc3a7695baf665aae4f0987985aa0293569e0b25fa658b3b07a58ca78",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/adapters/cli_profiles.py",
+      "sha256": "99479709ee8b85746528da845058ed9523d7010faebb6930c97225b5535e56bf",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/adapters/command_harness.py",
+      "sha256": "691cbc486dd89674686c1414d3e7fba6f2c3c29f26cfc920228751f3f3b377bf",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/adapters/fakes.py",
+      "sha256": "2c4545f523f180cbc1baef1f2870c03ac17d96a66186a06b0ddb93bad6a2564d",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/adapters/sandbox.py",
+      "sha256": "6206fe969ddfc9d150d4cfa60ade30c56db30292e10797c8351e332a4d8559cb",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/artifacts/__init__.py",
+      "sha256": "f206b9a3ca7dd55eeb671d220e241b8b751c54641bf68bf364f3bd1e0e57afb9",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/artifacts/gc.py",
+      "sha256": "076f0825bfd0c216191c4c9aeb7dc03d75d007907cb4e61dd3797285e0414fe7",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/artifacts/store.py",
+      "sha256": "330d6929789da1aa001e110512e04310429c040462d4ede36c3675cc477b70d1",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/cognitive/__init__.py",
+      "sha256": "8f67777006208d416a6eb43444c7976ca67109b4bac5f56c3766b19c8b0698fc",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/cognitive/api.py",
+      "sha256": "5e67036ebde121da45153ac469c65f9a9d52d2169fa3d52285f94007718130b7",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/cognitive/cli_profiles.py",
+      "sha256": "51c00c77e44837f9add10baae14895db674d987b06eb47e9040f362edc8c4c94",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/cognitive/contracts.py",
+      "sha256": "0c5b7dc8329d326008645d7a1156dcd09990f892cd809491124cda2e28846056",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/cognitive/ledger.py",
+      "sha256": "9c451102e5e345edda85a2f1c2364903d4fcaa0c2a66bdf79627da56b1a0643b",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/cognitive/process.py",
+      "sha256": "b8aa761485313d257b0a162aaaff2ab5d539af2acd5ddc233561fecc279ec347",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/cognitive/profiles.py",
+      "sha256": "629c9fc945d6f0f227e190d741bd7e60d342465d11c1c304abb4c8ed440dea8a",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/cognitive/registry.py",
+      "sha256": "886053d6ff5e9581cde1936da1177a3d53a050748d642eccea986bc21df01abc",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/cognitive/validation.py",
+      "sha256": "3f6db1dee80539e36d4378d3a0c37b20b85532831f73c5091d35e7111e63a6ed",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/contracts/__init__.py",
+      "sha256": "d5455aa59e11245ee8a2c8986b9d3864e57147026ab36cf2e1fd4985f28dec83",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/contracts/coordination.py",
+      "sha256": "fb82fed6b2b3bd2f4a031e3845c41a21ddc65339e11a6b0ca1f55aa09f541422",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/contracts/execution.py",
+      "sha256": "50826c75240c64fcd2c501d54affd71e56c8946b7afc7ecbff5ca2c933530764",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/contracts/output.py",
+      "sha256": "0107aaba470275323697c74a0627ea7b6079e8d2ffc652661769894ddbaabd82",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/contracts/plan.py",
+      "sha256": "8047c6b6ea17c91fb91957cc62befe03ff41468c5ee604065657b8a74eab3f58",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/contracts/serialization.py",
+      "sha256": "4336d0321386f47aa7daa7bf1ebe82e509322cc5e3d2d1583a22205e35fa2c39",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/contracts/subtask.py",
+      "sha256": "b8651dc56fe6dc96bc81d7e87eba69c2c957e6a288dddd67352612599cb1e2d7",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/coordinator/__init__.py",
+      "sha256": "8d36a1bd70b61f627b601a736cc8cb93d54bc8fadd240d17a1391bd9cf497d09",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/coordinator/claim.py",
+      "sha256": "56e8a4c9774733a7c8af581d6d745bbabdaa683ce43ebe9869a25c19aa413fb6",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/coordinator/coordination.py",
+      "sha256": "c85553765f58a04604e8bf784bed9ea4ded0229a3cf50463d8d80112db73ced7",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/coordinator/reconciliation.py",
+      "sha256": "1b603f7262ba5d483522d8b9791a6ebc7ee9b963c34488bd71951b1d38e192b9",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/coordinator/service.py",
+      "sha256": "d9039929771ad83fbe0c93af02d387434ce01ab9dd8ef0f0d0b1fafcfb402330",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/coordinator/state.py",
+      "sha256": "930d35fdc104c461a5074099381960e93291a1d817dfe5b3af6eaa4d6fd0a133",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/coordinator/transitions.py",
+      "sha256": "e7109a37f2136f650c4b0024684df96474d2d541f353be500f8044fb18e863f9",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/evolution/__init__.py",
+      "sha256": "6394b9bf4727d2765558dcd88a3a4379f234eb71156545ab8c5853661dda2fa7",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/evolution/autonomous.py",
+      "sha256": "24284c3395070b7f0360649218ce50602dcbcdcdcc99e7740ce5dfd5b25a4d8b",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/evolution/controller.py",
+      "sha256": "6c75f0d24cc6287b794804a7a541c9474131bf81abab8d7f6e609bcf8c2805f4",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/evolution/e1.py",
+      "sha256": "41a0b508f2f1355a91ffc72835abe621532a5906a43d9cdaa96f65f055c3bb03",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/evolution/e2.py",
+      "sha256": "267c8ad7da1874b5a78dd7b5b3c8cac73fcababff2eabc6a4dde6f86a60729db",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/evolution/e2_store.py",
+      "sha256": "9d5065c869bc6174aba74066d0756c489369c6af862e72735e0783cceb7f4f11",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/evolution/evaluator.py",
+      "sha256": "0c00167f1a9087864a251aa911328479c5735c8484b6ace580c1d2b896d52895",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/execution/__init__.py",
+      "sha256": "1e3fc03e76ef9d81939c3680f7561e116880817af12c3b31c5cb305c39358a5b",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/execution/process_supervisor.py",
+      "sha256": "0d72757f34cedba7bcab1fe2dcf9022112311cfd7676353c4ee376a66e6ab596",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/execution/registry.py",
+      "sha256": "4e2c50969f34be9c77214c6c6a4c1a01424d5b0bd0f81ee941698aed68869b7c",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/execution/router.py",
+      "sha256": "4d7300fc1dd660940e4d98948b0ec9170c6cbfe2a60f0a1075703e79cc903401",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/persistence/__init__.py",
+      "sha256": "edc6aff8b40a531d322fc86e8d728713f53069c3b1fd5684708a97b57ccf9e9a",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/persistence/events.py",
+      "sha256": "7160e698bdf2026a638ee1201da1bbf21bbdea7572e7af7f1af0b7782f4bc318",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/persistence/outbox.py",
+      "sha256": "090e54c9a71b0bb5489e25e87880f4e7957f33145c4e0f47a6e979e6c1f43f7b",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/persistence/postgres.py",
+      "sha256": "0d94e6cbfd191b96b4a646db8a23370b778298122bb7af4e4365cec4b45e9e94",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/remote/__init__.py",
+      "sha256": "c589e344c1e0ff9ccd0e80ffe1faa9a6b0c7aef6e4b371004ac2627a6ea72d0d",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/remote/config.py",
+      "sha256": "8edc18a573ab521100e4aaddc8949b2337db523df0ea8ce3def7ff063f520311",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/remote/control.py",
+      "sha256": "a53efe229a74ceff4273b5161c604b4dd26274b20907993716cc2b41c76b8b8a",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/remote/control_server.py",
+      "sha256": "0c37dc204e0f94f5fe3b6609ca9be1ababbbdb0eb9a494e20c98e708be90886a",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/remote/protocol.py",
+      "sha256": "89301cfc4e29e27106c59a69f1935f47afa1e2e940022770c032dcfbb427b0f3",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/remote/worker.py",
+      "sha256": "1580a3dd50f1639c8be0705f1557ff6778b6bb2598459c66d7cded26cb48f990",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/telemetry/__init__.py",
+      "sha256": "83de95dff0f5c323a6eec4a3946a4ed3585ec456ddbbbc5c1f4fef1dc18820fe",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "src/agentic_runtime/telemetry/execution_log.py",
+      "sha256": "37f3f04906ed1690de61b827ef937022971ccff0124d07fc20936047fbf84287",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/__init__.py",
+      "sha256": "6a4d2b6cd5a66d5639ec2f29e99edf0d4841e7ba7cb4d89a2a1acb624f95a7c0",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/fixtures/routing-policy-eval-v1.json",
+      "sha256": "8ff47b94528ed7316834452416afeb6c69529d930a763ccd625872f90c0540a0",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/integration/__init__.py",
+      "sha256": "5d6cd88f5a33b61ed9661cd4c3652b35e0ae1698b7165a464c622a72e42cae58",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/integration/test_m10_e2_end_to_end.py",
+      "sha256": "210253570f8948b8a5d715d5301fe02d78a7402d681eb0d7130b3beec64b67b1",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/integration/test_m4_autonomous.py",
+      "sha256": "c3d22ccd61cccdc64e45247156009f6df4a405263e6bee733510d92ba8ef68e7",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/integration/test_m4c_roles.py",
+      "sha256": "310a4e156425096f1027d74c960454c4d2bb21b1b9e2b7e5a0a333c18094b8bc",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/integration/test_m5_remote_worker.py",
+      "sha256": "7cfee09499fdbbd36b6b5f645d8d3c58546b46bf86ad9a0b293f92bcc41ea803",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/integration/test_m7_e1.py",
+      "sha256": "5e08dc0fa5baed2d5ba77b0c59b01546539139d24d5c1b76081ca30f0bcad77a",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/integration/test_m8_campaign_cost_policy.py",
+      "sha256": "bdf4bdd01465803d358650930a17b3f2bb06f9b2df638865c18dc2eaeb6b3ba0",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/integration/test_m8_cognitive_persistence.py",
+      "sha256": "a9e5cd8f7917c836a4217d910e9bb9cd347cf8c778cf7fac3e4fd3320296c306",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/integration/test_m9_cancellation_runtime.py",
+      "sha256": "a4fb83d8f0a4a1cceaec67851ef9f1682b569c9c28cbe45437e61df111890f5f",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/integration/test_postgres_runtime.py",
+      "sha256": "abcec76a8dcc3baed1a7f52e9f48efcca10aad3a55c05bae55fdb78208015a6c",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/__init__.py",
+      "sha256": "13b84955664c97857ba80a85ae4e8c18523453d97da4bc8d7c8c43a3335e75be",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/test_architecture_fitness.py",
+      "sha256": "b8a906e11b52c6f8a4f925efd08600ff130313790e61e90640b9bcdf56ab3505",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/test_cognitive_api_adapter.py",
+      "sha256": "239ce50975547d26b3da08aa5268dae264499250f67c31643c30f3f9787d30ee",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/test_cognitive_profiles.py",
+      "sha256": "3b9a4ac70e67828f60bf0737a33038e0f0f81f4f752b6d894ba7fbac8a6cdedc",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/test_e1_cost_evidence_policy.py",
+      "sha256": "47bebe03e0e3796256e2362fd2ae65462a76e4f3b570e0b2780d0b1e4031e8e9",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/test_e2_workflow_genome_contracts.py",
+      "sha256": "b1ad813203ba07d2ebb3e639df5a639e492b58fd7acbdbfde3dbcaa437ef32cb",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/test_execution_fabric.py",
+      "sha256": "6b78bd9a80eef2dd8ecf4261f8993429112559dfe04f0ff35b324b6e9cb8b807",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/test_m3_contracts.py",
+      "sha256": "6a70d1981acb8b578dee906dc1316ea6650c9a1643388f81d2fb215704697113",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/test_m6_transport.py",
+      "sha256": "70509c62081bff8dafa5d5d2800624af57722fa57266d38e7ce662f651c6d789",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/test_m8_candidate_failure_policy.py",
+      "sha256": "cd5a601c40b95385c7256b30a4ccff02693001371f33db3326fc7e33173f1783",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/test_m9_coordination_contracts.py",
+      "sha256": "5b5a95253beadbc2ae3ff15222f70c85cb381184524b6b941287370356626355",
+      "transformations": []
+    },
+    {
+      "classification": "PUBLIC",
+      "path": "tests/unit/test_publication_export.py",
+      "sha256": "bb1c5e2a5baad41fd44663327240579161845f500e579282648b9cedbe958def",
+      "transformations": []
+    }
+  ],
+  "history_policy": "clean tree only; private .git omitted"
+}

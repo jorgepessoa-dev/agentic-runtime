@@ -1,0 +1,1 @@
+"""Campaign resource accounting services."""

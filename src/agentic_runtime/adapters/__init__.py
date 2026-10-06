@@ -1,0 +1,1 @@
+"""Replaceable adapter implementations."""

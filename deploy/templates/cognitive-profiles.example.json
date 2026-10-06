@@ -1,0 +1,35 @@
+{
+  "profiles": [
+    {
+      "route_id": "example-json-route",
+      "adapter": "openai_compatible",
+      "provider": "example-provider",
+      "model_family": "example-family",
+      "model": "example-model",
+      "endpoint": "https://api.example.invalid/v1/chat/completions",
+      "credential_env": "PROVIDER_API_KEY",
+      "supported_roles": ["hypothesis_generator", "alternative_generator", "adversarial_reviewer"],
+      "max_input_tokens": 8192,
+      "max_output_tokens": 256,
+      "max_call_cost_usd": 0.01,
+      "price_schedule": {
+        "schedule_id": "replace-with-versioned-rate-card",
+        "input_usd_per_million": 0,
+        "output_usd_per_million": 0,
+        "source_ref": "https://provider.example.invalid/pricing",
+        "observed_at": "2026-01-01"
+      },
+      "tools": []
+    },
+    {
+      "route_id": "example-cli-route",
+      "adapter": "claude_code",
+      "provider": "replace-with-provider-name",
+      "model_family": "replace-with-model-family",
+      "model": "replace-with-model-alias",
+      "executable": "claude",
+      "effort": "low",
+      "tools": []
+    }
+  ]
+}
