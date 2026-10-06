@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     services:
       postgres:
         image: postgres:16
@@ -40,7 +40,19 @@ jobs:
       - name: Install sandbox runtime
         run: |
           sudo apt-get update
-          sudo apt-get install --yes bubblewrap
+          sudo apt-get install --yes apparmor bubblewrap
+          sudo tee /etc/apparmor.d/agentic-runtime-bwrap >/dev/null <<'EOF'
+          abi <abi/4.0>,
+          include <tunables/global>
+          profile agentic-runtime-bwrap /usr/bin/bwrap flags=(unconfined) {
+            userns,
+          }
+          EOF
+          sudo apparmor_parser -r /etc/apparmor.d/agentic-runtime-bwrap
+      - name: Verify Linux sandbox prerequisites
+        run: >-
+          bwrap --die-with-parent --unshare-user --unshare-pid --unshare-ipc --unshare-uts
+          --ro-bind /usr /usr --proc /proc --dev /dev -- /usr/bin/true
       - name: Prepare disposable test role
         run: psql "$M4C_ADMIN_DATABASE_URL" -v ON_ERROR_STOP=1 -c 'CREATE ROLE agentic_runtime_test NOLOGIN'
       - name: Install locked dependencies

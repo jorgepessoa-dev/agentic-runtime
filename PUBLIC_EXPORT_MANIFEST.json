@@ -58,7 +58,7 @@
     {
       "classification": "PUBLIC",
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "784b55fb9551623fce52732ffd3bbe2348e98179ae30cd45064fe8e618614e48",
+      "sha256": "fdb2cbbb2eb0493e2e814fce04c730aff324ed6b96421b05d376d4f10b9e7a28",
       "transformations": []
     },
     {
@@ -88,7 +88,7 @@
     {
       "classification": "PUBLIC",
       "path": ".github/workflows/ci.yml",
-      "sha256": "14b8903a87da6b70caf35f002b29ea4b57c401e0ee6ac187f5d147c4a0cb072e",
+      "sha256": "dd3e1ff968ba1743e8c2d5a6df768721561139a8dc51cf66b9f81b6fd1c78eda",
       "transformations": []
     },
     {
