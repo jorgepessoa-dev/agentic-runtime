@@ -52,7 +52,8 @@ jobs:
       - name: Verify Linux sandbox prerequisites
         run: >-
           bwrap --die-with-parent --unshare-user --unshare-pid --unshare-ipc --unshare-uts
-          --ro-bind /usr /usr --proc /proc --dev /dev -- /usr/bin/true
+          --ro-bind /usr /usr --ro-bind /lib /lib --ro-bind /lib64 /lib64
+          --proc /proc --dev /dev -- /usr/bin/true
       - name: Prepare disposable test role
         run: psql "$M4C_ADMIN_DATABASE_URL" -v ON_ERROR_STOP=1 -c 'CREATE ROLE agentic_runtime_test NOLOGIN'
       - name: Install locked dependencies

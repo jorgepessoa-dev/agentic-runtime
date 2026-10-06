@@ -88,7 +88,7 @@
     {
       "classification": "PUBLIC",
       "path": ".github/workflows/ci.yml",
-      "sha256": "dd3e1ff968ba1743e8c2d5a6df768721561139a8dc51cf66b9f81b6fd1c78eda",
+      "sha256": "619045709a55259a8bbebc27e718dc5b72c418b0987579c8d85069d5f032f19b",
       "transformations": []
     },
     {
