@@ -37,6 +37,10 @@ jobs:
       - uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
+      - name: Install sandbox runtime
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes bubblewrap
       - name: Prepare disposable test role
         run: psql "$M4C_ADMIN_DATABASE_URL" -v ON_ERROR_STOP=1 -c 'CREATE ROLE agentic_runtime_test NOLOGIN'
       - name: Install locked dependencies
