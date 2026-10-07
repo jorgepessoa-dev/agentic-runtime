@@ -21,6 +21,7 @@ ALLOW_FILES = {
     "pyproject.toml", "uv.lock", "scripts/build_public_export.py",
     "scripts/run_m4c_role_tests.py", "scripts/bootstrap_m4_roles.sql", "VERSIONING.md",
     "docs/COGNITIVE_ADAPTERS.md", "docs/publication/PUBLICATION_READINESS.md",
+    "docs/stability/S1_TEST_STABILITY.md",
     "decisions/ADR-009-governed-workflow-genome-evolution.md",
     ".github/workflows/ci.yml",
     "tests/fixtures/routing-policy-eval-v1.json",

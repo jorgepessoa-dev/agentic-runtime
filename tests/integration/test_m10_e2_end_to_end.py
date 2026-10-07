@@ -225,8 +225,12 @@ class E2GovernedM9ExecutionTests(unittest.TestCase):
         store.freeze_evaluation_pack(pack_id=pack_id,scope_id=scope,suite_id=suite_id,
             suite_version="1",evaluator_version="m10-evaluator-v1",
             workload_keys=["light","medium","heavy"],
-            workloads={"light":{"work_units":1},"medium":{"work_units":2},"heavy":{"work_units":4}},
-            repetitions=2,holdout_scenarios={"hidden-stress":{"work_units":3}},
+            # Keep worker execution materially longer than the measured M9
+            # dispatch/persistence overhead.  The per-node delay remains the
+            # frozen runtime mapping of 100 ms per work unit; the workload
+            # scale changes only in this deterministic test fixture.
+            workloads={"light":{"work_units":4},"medium":{"work_units":5},"heavy":{"work_units":5}},
+            repetitions=2,holdout_scenarios={"hidden-stress":{"work_units":5}},
             created_by="m10-governance",minimum_latency_improvement=0.05)
         self.assertEqual(self.runtime.execute("SELECT count(*) AS n FROM evolution.e2_evaluation_scenarios WHERE pack_id=%s AND partition='DEVELOPMENT'",
             (pack_id,)).fetchone()["n"],3)
@@ -463,9 +467,32 @@ class E2GovernedM9ExecutionTests(unittest.TestCase):
             created_by="e2-observer",measurements={key:value for key,value in development_metrics.items()
                 if isinstance(value,(int,float,bool,str))})
         development_evidence_intake_verified=True
-        store.compare(comparison_id=comparison_id,mutation_id=mutation_id,
-            candidate_genome_id=candidate_id,champion_genome_id=champion_id,
-            pack_id=pack_id,evaluator_id=evaluator_id)
+        try:
+            store.compare(comparison_id=comparison_id,mutation_id=mutation_id,
+                candidate_genome_id=candidate_id,champion_genome_id=champion_id,
+                pack_id=pack_id,evaluator_id=evaluator_id)
+        except E2PolicyError as exc:
+            if "repeatability tolerance" not in str(exc):
+                raise
+            rows=self.evaluator.execute("""SELECT side,workload_key,repetition,metrics
+                FROM evolution.e2_evaluation_runs WHERE mutation_id=%s AND side IN ('CANDIDATE','CHAMPION')
+                ORDER BY side,workload_key,repetition""",(mutation_id,)).fetchall()
+            diagnostic_groups={}
+            for row in rows:
+                diagnostic_groups.setdefault((row["side"],row["workload_key"]),[]).append(
+                    float(row["metrics"]["latency_ms"]))
+            latency_diagnostics=[]
+            for (side,workload_key),samples in sorted(diagnostic_groups.items()):
+                work_units=float(definition["workloads"][workload_key]["work_units"])
+                expected_ms=work_units*100*(2 if side=="CHAMPION" else 1)
+                latency_diagnostics.append({"side":side,"workload":workload_key,
+                    "observed_latency_ms":samples,"expected_plan_latency_ms_diagnostic":expected_ms,
+                    "latency_overhead_ms_diagnostic":[sample-expected_ms for sample in samples],
+                    "range_mean_spread":((max(samples)-min(samples))/(sum(samples)/len(samples))
+                        if samples and sum(samples)>0 else None),
+                    "frozen_repeatability_fraction":definition["latency_repeatability_fraction"]})
+            self.fail("M10 real-latency repeatability gate failed; persisted wall-clock diagnostics="
+                +json.dumps(latency_diagnostics,sort_keys=True)+f"; original={exc}")
         comparison=self.evaluator.execute("SELECT eligible,comparison FROM evolution.e2_comparisons WHERE comparison_id=%s",
                                           (comparison_id,)).fetchone()
         self.assertTrue(comparison["eligible"],comparison["comparison"])
@@ -741,6 +768,17 @@ class E2GovernedM9ExecutionTests(unittest.TestCase):
             run_id=post_run,recovery_event_id=post_recovery["event_id"],
             execution_evidence=post_evidence,artifact_refs=post_artifacts,checked_by=verifier_id),
             "replayed durable post-check must finish the interrupted rollback")
+        postcheck_row=self.verifier.execute("SELECT passed,metrics FROM evolution.e2_postpromotion_checks WHERE decision_id=%s",
+                                             (decision_id,)).fetchone()
+        candidate_latency=float(comparison["comparison"]["CANDIDATE"]["latency_ms"])
+        latency_regression_limit=(candidate_latency*
+            (1+float(definition["postpromotion_latency_regression_fraction"])))
+        self.assertFalse(postcheck_row["passed"])
+        self.assertGreater(float(postcheck_row["metrics"]["latency_ms"]),latency_regression_limit,
+            "real post-promotion M9 makespan must exceed the frozen latency regression limit")
+        self.assertTrue(postcheck_row["metrics"]["recovery_pass"])
+        self.assertEqual(float(postcheck_row["metrics"]["success_rate"]),1.0)
+        self.assertEqual(float(postcheck_row["metrics"]["verifier_acceptance_rate"]),1.0)
         passed=False
         self.assertFalse(passed,"injected frozen stress load should trigger the post-promotion rollback")
         self.assertFalse(store.postpromotion_check(check_id=post_check_id,decision_id=decision_id,
